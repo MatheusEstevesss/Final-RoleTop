@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>RoleTop</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/349a64cb04.js"></script>
+</head>
+
+<body>
+        <nav>
+            <div>
+                <ul>
+                        <li id="bt-mobile-menu">
+                                <!-- HTML para colocar os ícones do FA -->
+                                <a href="javascript:void(0);" class="icon" onclick="toggleMobileMenu()">
+                                    <i class="fa fa-bars"></i>
+                                </a>
+                            </li>
+                    <li class="bt-common-menu"><img src="img/logo.png" title="Logo Roletop"></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="RoleTop.html" class="active">Principal</a></li>           
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="FacaSeuEvento.html" class="active">Faça seu Evento</a></li>           
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="login.html">Login</a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="Galeria.html">Galeria</a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="Cadastro.html">Cadastre-se</a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="DúvidasFrequentes.html">Dúvidas frequentes</a></li>                    
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="SobreNos.html">Sobre Nós</a></li>
+                </ul>
+            </div>
+        </nav>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <main>
+        <div id="nometotalmentenovo">
+            <h2>Cadastre-se</h2>
+            <form method="GET" action="RoleTop.html" class="ka">
+
+                <div>
+                    <label class="e" for="nomes">Nome Completo</label>
+
+                    <input id="nomecompleto" type="text">
+                </div>
+                <div>
+                    <label class="e" for="email">Email</label>
+
+                    <input id="email4" type="email">
+                </div>
+
+                <div class="tentativa">
+                    <div class="tentativa1">
+                        <label class="e1" for="cpf/cnpj2">CPF/CNPJ</label>
+                    
+                        <input id="cpf2" type="text">
+                    </div>
+
+                    <div class="tentativa2">
+                        <label class="e2" for="telefone1">Telefone</label>
+                    
+                        <input id="telefone1" type="text">
+                    </div>
+                </div>
+
+                <div class="nascimento1">
+                    <label class="e3" for="nascimento">Nascimento</label>
+
+                    <input id="nascimento" type="date">
+                </div>
+
+                <div>
+                    <label class="e4" for="endereço">Endereço</label>
+
+                    <input id="endereço" type="text" placeholder="Rua dhushfushfusfhi, 28 -">
+                </div>
+
+                <div>
+                    <label class="e5" for="senha12">Senha</label>
+
+                    <input id="senha2" type="password">
+                </div>
+
+                <div>
+                    <label class="e6"for="senha3">Confirme sua Senha</label>
+
+                    <input id="senha3" type="password">
+                </div>
+
+                <input id="jaja" type="submit" value="Cadastre-se">
+
+            </form>
+        </div>
+    </main>
+
+    <footer>
+            <div class="localização">
+                <address>
+                    Avenida de Limeira, 539 - Campos Elíseos - SP
+                    <br />
+                    roletop@gmail.com
+                    <br />
+                    11 1234 6789
+                </address>
+            </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            var ul = document.querySelector("nav ul");
+            var commonButtons = document.querySelectorAll("nav .bt-common-menu");
+            var icon = document.querySelector(".icon > i");
+
+            ul.classList.toggle("mobile-mode");
+
+            if (icon.classList.contains("fa-bars")) {
+                icon.classList.remove("fa-bars");
+                icon.classList.remove("fa");
+
+                icon.classList.add("fas");
+                icon.classList.add("fa-skull");
+            } else {
+                icon.classList.remove("fas");
+                icon.classList.remove("fa-skull");
+
+                icon.classList.add("fa");
+                icon.classList.add("fa-bars");
+            }
+
+            for (var button of commonButtons) {
+                button.classList.toggle("active");
+            }
+
+        }
+        
+    </script>
+</body>
+</html>

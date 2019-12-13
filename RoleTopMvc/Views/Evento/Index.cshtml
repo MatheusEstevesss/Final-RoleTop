@@ -1,0 +1,96 @@
+@model RoleTopMvc.ViewModels.EventoViewModel
+<main>
+    <div id="evento">
+            <h2>Cadastre seu Evento</h2>
+            <form method="POST" action='@Url.Action("Registrar", "Evento")' id="kakaka">
+
+                <div>
+                    <label class="l2" for="name">Nome Completo</label>
+
+                    <input id="name" type="text" name="nome" value="@Model.Cliente.Nome">
+                </div>
+
+                <div class="alinhamento">
+                    <label class="l3" for="pessoa">Tipo de Pessoa</label>
+
+                    <select id="serviços" name="tipo-pessoa" required>
+                        <option value="" disabled selected>Selecione</option>
+                        <option value="Física">Física</option>
+                        <option value="Jurídica">Jurídica</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="l4" for="cpf">CPF/CNPJ</label>
+
+                    <input id="cpf" type="text" name="documento" value="@Model.Cliente.Documento">
+                </div>
+                
+                <div>
+                    <label class="l" for="telefone">Telefone</label>
+
+                    <input id="telefone" type="text" name="telefone" value="@Model.Cliente.Telefone">
+                </div>
+
+                <div>
+                    <label class="l5" for="email">Email</label>
+
+                    <input id="email2" type="email" name="email" value="@Model.Cliente.Email">
+                </div>
+
+                <div class="dataevento">
+                    <label class="l6" for="data">Data do Evento</label>
+
+                    <input id="evento2" type="date" name="data-evento">
+                </div>
+
+                <div class="aluguel">
+                    <label class="l7" for="serviços">Opções de Aluguel: </label>
+                    
+                    <div class="aluguel2">
+                    <select id="serviços" name="opcao-servicos" required>
+                        <option value="" disabled selected>Selecione</option>
+                        @foreach(var s in Model.Servicos)
+                        {
+                            <option value="@s.Nome">@s.Nome</option>
+                        }
+                    </select>
+                
+
+                <div class="pagamento">
+                    <label class="l8" for="pagamento">Formas de Pagamento:</label>
+
+                    <div class="pagamento2">
+                    <select id="serviços" name="forma-pagamento" required>
+                        <option value="" disabled selected>Selecione</option>
+                        @foreach(var p in Model.Pagamento)
+                        {
+                            <option value="@p.Nome">@p.Nome</option>
+                        }
+                    </select>
+                    </div>
+                </div>
+
+                <div class="tipo">
+                    <label class="l9" for="tipo">Tipo de Evento</label> 
+
+                    <select id="serviços" name="tipo-evento" required>
+                        <option value="" disabled selected>Selecione</option>
+                        <option value="salao">Público</option>
+                        <option value="salaoIluminacao">Privado</option>
+                    </select>
+                </div>
+
+                <span class="dnv">OBS: VALOR MINÍMO DO ALUGUEL R$10.000,00</span>
+
+                <div>
+                    <label class="l0" for="descrição">Descreva seu Evento</label>
+
+                    <input id="descrição" type="text" name="descricao">
+                </div>
+
+                <input id="esqueci" type="submit" value="Cadastre seu evento">
+
+            </form>
+        </div>
+</main>

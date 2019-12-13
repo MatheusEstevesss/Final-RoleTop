@@ -1,0 +1,59 @@
+<main>
+    <div id="nometotalmentenovo">
+        <h2>Cadastre-se</h2>
+        <form method="POST" action='@Url.Action("CadastrarCliente", "Cadastro")' class="ka">
+
+            <div>
+                <label class="e" for="nomes">Nome Completo</label>
+
+                <input id="nomecompleto" type="text" name="nome">
+            </div>
+            <div>
+                <label class="e" for="email">Email</label>
+
+                <input id="email4" type="email" name="email"> 
+            </div>
+
+            <div class="tentativa">
+                <div class="tentativa1">
+                    <label class="e1" for="cpf/cnpj2">CPF/CNPJ</label>
+                    
+                    <input id="cpf2" type="text" name="documento">
+            </div>
+
+            <div class="tentativa2">
+                <label class="e2" for="telefone1">Telefone</label>
+                    
+                <input id="telefone1" type="text" name="telefone"> 
+            </div>
+            </div>
+
+            <div class="nascimento1">
+                <label class="e3" for="nascimento">Nascimento</label>
+
+                <input id="nascimento" type="date" name="data-nascimento" required>
+                </div>
+
+            <div>
+                <label class="e4" for="endereço">Endereço</label>
+
+                <input id="endereço" type="text" placeholder="Rua dhushfushfusfhi, 28 -" name="endereco">
+            </div>
+
+            <div>
+                <label class="e5" for="senha12">Senha</label>
+
+                <input id="senha2" type="password" name="senha">
+            </div>
+
+            <div>
+                <label class="e6"for="senha3">Confirme sua Senha</label>
+
+                <input id="senha3" type="password" name="confirmar-senha">
+            </div>
+
+                <input id="jaja" type="submit" value="Cadastre-se">
+
+            </form>
+    </div>
+</main>

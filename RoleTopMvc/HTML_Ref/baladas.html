@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>RoleTop</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/349a64cb04.js"></script>
+</head>
+
+<body>
+        <nav>
+            <div>
+                <ul>
+                        <li id="bt-mobile-menu">
+                                <!-- HTML para colocar os ícones do FA -->
+                                <a href="javascript:void(0);" class="icon" onclick="toggleMobileMenu()">
+                                    <i class="fa fa-bars"></i>
+                                </a>
+                            </li>
+                    <li class="bt-common-menu"><img src="img/logo.png" title="Logo Roletop"></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="RoleTop.html" class="active">Principal</a></li>           
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="FacaSeuEvento.html" class="active">Faça seu Evento</a></li>           
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="login.html">Login</a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="Galeria.html">Galeria</a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="Cadastro.html">Cadastre-se</a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="DúvidasFrequentes.html">Dúvidas frequentes</a></li>                    
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="SobreNos.html">Sobre Nós</a></li>
+                </ul>
+            </div>
+        </nav>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+        <h5>Baladas</h5>
+        
+            <div class="niverimg">
+
+                <div class="par1">
+                    <img class="resolução" src="img/Baladas.jpg">
+
+                    <img class="resolução" src="img/baladas1.jpg">
+                </div>
+
+                <div class="par2">
+                    <img class="resolução" src="img/baladas2.jpg">
+
+                    <img class="resolução" src="img/baladas3.jpg">
+                </div>
+
+            </div>
+
+        <footer>
+                <div class="section-container">
+                    <address>
+                        Avenida de Limeira, 539 - Campos Elíseos - SP
+                        <br />
+                        mcbonalds@email.com
+                        <br />
+                        11 1234 6789
+                    </address>
+                        <a href="#">Voltar para o topo!</a>
+                </div>
+            </footer>
+
+            <script>
+                function toggleMobileMenu() {
+                    var ul = document.querySelector("nav ul");
+                    var commonButtons = document.querySelectorAll("nav .bt-common-menu");
+                    var icon = document.querySelector(".icon > i");
+        
+                    ul.classList.toggle("mobile-mode");
+        
+                    if (icon.classList.contains("fa-bars")) {
+                        icon.classList.remove("fa-bars");
+                        icon.classList.remove("fa");
+        
+                        icon.classList.add("fas");
+                        icon.classList.add("fa-skull");
+                    } else {
+                        icon.classList.remove("fas");
+                        icon.classList.remove("fa-skull");
+        
+                        icon.classList.add("fa");
+                        icon.classList.add("fa-bars");
+                    }
+        
+                    for (var button of commonButtons) {
+                        button.classList.toggle("active");
+                    }
+        
+                }
+                
+            </script>
+
+</body>
+
+</html>
