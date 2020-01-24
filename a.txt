@@ -1,0 +1,5 @@
+Chave primaria - dado mais importante da entidade, normalmente é escohido o ID por ser unico, em outros casos pode mudar sendo por exemplo 
+o cpf da pessoa, toda entidade precisa de uma chave primaria
+
+Chave Estrangeira - quando o atributi ainda possui o seu valor  porem é referenciado em outra tabela, exemplo PET possui RAÇA logo o ID RAÇA
+vai ser referenciado dentro da table do PET ciando uma ligação.
